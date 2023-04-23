@@ -1,0 +1,147 @@
+input[type = "checkbox"] {
+  visibility: hidden;
+  display: none;
+  appearance: none;
+  -webkit-appearance: none;
+}
+.container-checkbox  {
+    display: flex;
+    margin-left: auto;
+}
+
+label.container-label {
+  margin-left: auto;
+  display: block;
+  width: 60px;
+  height: 30px;
+  background: #d3d3d3;
+  border-radius: 50px;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 9px 9px 29px #969696,
+             -9px -9px 29px #ffffff;
+}
+
+label.shadow {
+  width: 50px;
+  height: 20px;
+  position: absolute;
+  border-radius: 50px;
+  left: 5px;
+  top: 5px;
+  box-shadow: inset 3px 3px 10px #969696,
+              inset -3px -3px 5px #ffffffbd;
+  cursor: pointer;
+}
+
+.container-label span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #ffaa00;
+  margin: 5px;
+  border-radius: 50px;
+  font-size: 20px;
+  transition: all 0.3s ease-in;
+  position: relative;
+  left: 0;
+  top: 0;
+  z-index: 1;
+
+  @media screen and (max-width: 768px) {
+    top: 0;
+    min-width: 20px;
+    max-height: 20px;
+  }
+  @media screen and (min-width: 1280px) {
+    top: -19;
+    min-width: 20px;
+    max-height: 20px;
+  }
+}
+
+.container-label span::after {
+  position: absolute;
+  top: 6px;
+  left: 4px;
+  transition-delay: 5s;
+}
+
+input[type = "checkbox"]:checked ~ span {
+  left: 29px;
+  transition: 0.3s ease-in;
+  background: #0a100d;
+  transform: rotate(220deg);
+}
+
+
+body.dark-theme {
+   background-color: #333333;
+color: #e5ead7;
+ transition: color ease-out 1s;
+
+   &.muvies__title {
+     color: #e5ead7;
+   }
+     & .pagination-button {
+     background-color: #333333;
+     color: lightgrey;
+   }
+   & .arrow-right {
+     stroke: darkgrey
+   }
+
+   & .card__title {
+     color: #cccccc
+   }
+
+   & .card__text {
+     color: #ff8800
+   }
+   & .footer-text {
+     color: lightgrey;
+   }
+   &.footer-students-btn  {
+     color: #ffaa00;
+   }
+   & .footer-link:hover {
+     color: #e5ead7;
+   }
+   & .pagination__arrow-left{
+     background-color: #b7b7b7;
+   }
+
+   & .pagination__arrow-right{
+     background-color: #b7b7b7;
+   }
+   & .pagination__button{
+     color: #fff;
+   }
+   & .footer{
+     background-color: #545454;
+   }
+
+   & .footer__text{
+     color: #d8d8d8;
+   }
+
+   & .footer-students-btn{
+     color: rgb(226 226 226);
+     &:hover,
+       &:active,
+       &:focus {
+         color: #ffffff;
+         text-decoration: none;
+       }
+
+       #heart {
+         width: 18px;
+         height: 19px;
+       }  
+   }
+
+   & .footer .container span {
+       color: #d8d8d8;
+   }
+ }
+
